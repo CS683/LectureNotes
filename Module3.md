@@ -9,4 +9,21 @@
 for example, when working with spinners and listviews.
 7. If the data will change, you need to create an adapter in the Java code to bind the data. 
 8. An adapter specifies the data collection it assoicates with and the view for each individual data item. 
-The adapter view will specifies how to display these views (the relative positions of these views).  
+The adapter view will specifies how to display these views (the relative positions of these views).
+9. AdatperViews use the Observer pattern. They are observers and the associated data (or through adapter) are observable. When the associated data changes, you can call the notifyDataSetchanged() method of the adatper to update the adapterview.
+## RecyclerViews
+1. It is very similar to ListViews. However, it is NOT inherited from AdapterView. It is provided in the support library and 
+now it is in the Androidx namespace (androidx.recyclerview.widget.RecyclerView).
+2. To use a recyclerview, we need first to subclass RecyclerView.Adapter to create an adapter for the Recylcerview. 
+The subclass needs to implement three abstract methods. It also needs to specify the associated data. 
+3. Use the setAdapter() method of the RecyclerView to set its adapter.
+##Communication between Activites
+1. Activities are independent Android components. They communicate through intents. To start another activity, simply call startActivit().
+2. An intent is a message object, that encapsulates both data and actions. You can also specify the receiving objects in the intent.
+## Communciation between Fragments
+1. Fragments are not independent Android components. They depend on activities that contain them. They cannot communicate with each other directly, but always through activity. 
+2. In the activity class, it is easier to get the references to the fragment objects the activity contains, and thus it is easy to call any public methods defined in the Fragment and pass any parameters.
+2. However, the fragment may not know what kind of activites that will contain it when it is first designed. While you can get the reference to the containing activity, you shall not call any public methods defined in that activity directly. Instead, you can define an interface first and let that activity class implement that interface. 
+
+
+
