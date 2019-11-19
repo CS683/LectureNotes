@@ -1,12 +1,12 @@
 # Data Storage
 ## Some questions:
-1. what type of data need to be stored in app?
+* what type of data need to be stored in app?
 small setting/configuration data, structured data, unstructured data (general files), local/remote
-2. Where are they stored in the device?
+* Where are they stored in the device?
 Under /data/data/<appname>/. 
 Each folder has its own uid/gid. Cannot be accessed by other applications. 
 This is usually called the internal storage, which other applications cannot access.
-3. What APIs are used to store/access the data? 
+* What APIs are used to store/access the data? 
 ## SharedPreferences
 1. Used to store small amount of configuration data. Stored the key value pairs in xml files under /data/data/<appname>/shared_prefs/.
 2. An app can have multiple shared preference files, each stores multiple key value pairs.
