@@ -46,6 +46,7 @@
  * External storage is usually under /sdcard. They are accessable by other apps. Files in the Public external storage (usually /sdcard root directory) are not deleted after uninstalling the app. Files in the private external storage (usuaully /sdcard/Android/data/<appname>/ are deleted after uninstalling the app. 
 
 * Summary table
+
 |API|Path|deleted?|accessible|
 |---|---|---|---|
 | getFilesDir()|internal storage under ./files/ subfolder |deleted after uninstall | not accessible by other apps
