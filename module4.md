@@ -30,7 +30,10 @@
   * ContentValue object is offen used to store a set of value in a record . 
   * cursor object is returned when performing a database query, enabling traversal over the records returned from the database query. 
   * A separate Dao calss can be used to separate the database code from UI code. 
-  
+ ## ContentProvider
+ * It is an interface to expose you app data to other applcations or some special widgetes.
+ * While it is common to use SQLiteDatabase as the underneath storage for the content provide, other storage such as files can also be used. 
+ *  ContentProvide 
   
   
 
