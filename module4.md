@@ -39,12 +39,13 @@
   * Create a subclas of ContentProvider, implement its CURD methods using the underneath storage CRUD methods (e.g SQLiteDatabase CRUD methods)
  * Define the ContentProvider in the AndroidManifest.xml file
  * To access data in a contentprovider, use ContentResolver and provide URI when performing CRUD operations. 
-* File
+## File
  * Internal storage is under application folder /data/data/<appname>/. Files are stored in the ./files/ or ./cache subfolder. They are not accessible by other apps.
   * openFileOutput(): returns a file outputstream to write data to the file
   * openFileInput():  returns a file inputstream to read data from the file
- ** External storage is usually under /sdcard. They are accessable by other apps. Files in the Public external storage (usually /sdcard root directory) are not deleted after uninstalling the app. Files in the private external storage (usuaully /sdcard/Android/data/<appname>/ are deleted after uninstalling the app. 
+ * External storage is usually under /sdcard. They are accessable by other apps. Files in the Public external storage (usually /sdcard root directory) are not deleted after uninstalling the app. Files in the private external storage (usuaully /sdcard/Android/data/<appname>/ are deleted after uninstalling the app. 
 
+* Summary table
 |API|Path|deleted?|accessible|
 |---|---|---|---|
 | getFilesDir()|internal storage under ./files/ subfolder |deleted after uninstall | not accessible by other apps
