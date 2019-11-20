@@ -33,7 +33,26 @@
  ## ContentProvider
  * It is an interface to expose you app data to other applcations or some special widgetes.
  * While it is common to use SQLiteDatabase as the underneath storage for the content provide, other storage such as files can also be used. 
- *  ContentProvide 
+ * Content Providers use URI to identify the data. The key to implement a ContentProvider is to match the URI to underneath storage such as database. A content URI is in the following format: content://<authority name>/<path>/<id>, e.g. content://edu.bu.projectportalprovider/projects/1. The <id> part is optional.
+ * Content Provider implmentation:
+  * Create a UriMatcher and build up a tree of UriMatch objects to match URIs to the underneath storage (e.g. database tables, rows, or files)
+  * Create a subclas of ContentProvider, implement its CURD methods using the underneath storage CRUD methods (e.g SQLiteDatabase CRUD methods)
+ * Define the ContentProvider in the AndroidManifest.xml file
+ * To access data in a contentprovider, use ContentResolver and provide URI when performing CRUD operations. 
+* File
+ * Internal storage is under application folder /data/data/<appname>/. Files are stored in the ./files/ or ./cache subfolder. They are not accessible by other apps.
+  * openFileOutput(): returns a file outputstream to write data to the file
+  * openFileInput():  returns a file inputstream to read data from the file
+ ** External storage is usually under /sdcard. They are accessable by other apps. Files in the Public external storage (usually /sdcard root directory) are not deleted after uninstalling the app. Files in the private external storage (usuaully /sdcard/Android/data/<appname>/ are deleted after uninstalling the app. 
+
+|API|Path|deleted?|accessible|
+|---|---|---|---|
+| getFilesDir()|internal storage under ./files/ subfolder |deleted after uninstall | not accessible by other apps
+| getCacheDir()|internal storage under ./cache/ subfolder | deleted after uninstall| not accessible by other apps
+| getExternalFilesDir()| private external storage file folder | deleted after uninstall| accessible by other apps
+| getExtenralCacheDir()| private external storage cache folder | deleted after uninstall| accessible by other apps
+| getExternalPublicStorageDir()| public external storage | not deleted|  accessible by other apps
+ 
   
   
 
