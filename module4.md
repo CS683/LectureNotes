@@ -13,7 +13,7 @@
 * To access the sharedPreferences object, call getSharedPreferences(name, mode) in a context such as activity.  
 * SharedPreferences defines a number of getter methods to get values based on keys. 
 * To write data in the sharedPreferences, we need to user editor and its putter methods. 
-* You can also call getPreferences(mode) in an activity. No need to pass a name into this method, as the default name is the actiyt name. This is intended to have a private sharedpreferences just for that activity.
+* You can also call getPreferences(mode) in an activity. No need to pass a name into this method, as the default name is the activity name. This is intended to have a private sharedpreferences just for that activity.
 ## Database - SQLite.
 * SQLite: a lite, simple SQL database. A database is simply a file. No server and no need for special configuration. Support SQL statements.
 * Databases are stored under /data/data/\<appname\>/databases/. You can create multiple databases. Each database is just a simiple file.
