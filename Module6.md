@@ -8,7 +8,7 @@
 * Password protected. Password is used in the encryption process. Device management API are provided.
 * Application Sandbox
   * Each application is run in a separate process. Process isolation is provided by underneath Linux kernel. 
-  Each application cannot access other application's member. Communication between different applications are done through IPC or ICC. 
+  Each application cannot access other application's memory. Communication between different applications are done through IPC or ICC. 
   * Each application has a separate uid/gid. Using the file system permission mechanism, each application cannot access 
   another application's internal storage. Data share between different applications are through content provider or external storage.
 * Android Permission Model
