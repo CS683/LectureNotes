@@ -42,7 +42,7 @@
   * Use AnimationDrawable to implement frame-by-frame animation
   * Use Animation to implement Tweened Animation.
 * Example:
- *
-  
+  * GraphicsExample (https://github.com/CS683/Graphicsexample)
+   
     
 
