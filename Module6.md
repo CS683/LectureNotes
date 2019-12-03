@@ -1,4 +1,5 @@
 # Module 6
+
 ## Android Security
 * SE-Linux (Security enhanced Linux) is used in Android.
 * Verified boot is used.
@@ -26,9 +27,22 @@
   * Open component
 ## Graphics 
 * Drawable
-* Customerized View
+ * Something that can be drawn
+ * Can be stored in res/drawable folder. The drawable id is the filename without extension name. Refer it in Java as R.drawable.something, or @drawable/something in xml.
+ * Used as the background image for views, or in image views.
+ * Many direct or indirect subclasses such as BitmapDrawable, ShapeDrawable, PictureDrawable, NinePatchDrawable, LayerDrawable, TransitionDrawable, AnimiationDrawable,
+* Custom View
+ * To create a custom view, subclass the view class and implement onDraw() method.
+ * onDraw() is called initially (implicitly) when the view is rendered, and whenever invalidate() is called on the view. 
 * Canvas
+ * For customized drawing. Hold all draw calls.
+ * When the onDraw() method is called on view, the canvas is passed in.
 * Animation
+ * Use TransitionDrawable to implment cross-fade transition between two layers.
+ * Use AnimationDrawable to implement frame-by-frame animation
+ * Use Animation to implement Tweened Animation.
+* Example:
+ *
   
     
 
