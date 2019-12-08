@@ -54,8 +54,7 @@ it need to use a handler associated with the receiving thread, and use that hand
 * Since usually a long operation is run in the service, a background thread is usually used to prevent the UI thread
 from blocking. You need to either create a background thread using Java thread API or Handler thread API or 
 or using an intent service
-* To send an intent to a startservice, use startService(intent). To handle the intents in the startedService, 
-override onStartCommand(). 
+* To send an intent to a started service, use startService(intent). To handle the intents in the startedService, override onStartCommand(). 
 * Intent Services
   * Provide a background worker thread to handle all incoming intents.
   * The callback onHandleIntent() is called by onStartCommand(). Be aware that onStartCommand() is executed 
@@ -63,7 +62,13 @@ override onStartCommand().
   * Like AsyncTask, only one background thread is provided. If you need multiple background threads, you need to use 
   the general service and create them explicitly.
   * It also stops itself automatically. 
-  
+* Bounded service
+ * To establish a client-server relationship. Need to establish a communication channel with client through Binder.
+ * To send an intent to a bounded service, use bindService(). 
+ * Need to implement onBind() to return a valid binder. 
+* Foreground Service
+  * Started service + notification
+
 
 
 
