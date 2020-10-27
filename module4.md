@@ -3,7 +3,7 @@
 * What types of data need to be stored in app?
   * small setting/configuration data, structured data, unstructured data (general files), local/remote
 * Where are they stored in the device?
-  * Under /data/data/\<appname\>/. 
+  * Under /data/data/\<fullpacketname\>/. 
   * Each folder has its own uid/gid. Cannot be accessed by other applications. 
   * This is usually called the internal storage, which other applications cannot access.
 * What APIs are used to store/access the data? (see below)
