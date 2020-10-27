@@ -1,6 +1,6 @@
 # Data Storage
 ## Some questions:
-* what type of data need to be stored in app?
+* What types of data need to be stored in app?
   * small setting/configuration data, structured data, unstructured data (general files), local/remote
 * Where are they stored in the device?
   * Under /data/data/\<appname\>/. 
