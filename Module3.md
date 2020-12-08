@@ -17,7 +17,7 @@ now it is in the Androidx namespace (androidx.recyclerview.widget.RecyclerView).
 2. To use a recyclerview, we need first to subclass RecyclerView.Adapter to create an adapter for the Recylcerview. 
 The subclass needs to implement three abstract methods. It also needs to specify the associated data. 
 3. Use the setAdapter() method of the RecyclerView to set its adapter.
-##Communication between Activites
+## Communication between Activites
 1. Activities are independent Android components. They communicate through intents. To start another activity, simply call startActivit().
 2. An intent is a message object, that encapsulates both data and actions. You can also specify the receiving objects in the intent.
 ## Communciation between Fragments
